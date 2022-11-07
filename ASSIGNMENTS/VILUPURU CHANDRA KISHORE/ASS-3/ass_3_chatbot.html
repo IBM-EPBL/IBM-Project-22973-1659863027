@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> HOME PAGE</title>
+        <style>
+            .content{
+                text-align: center;
+                font-size: 25px;
+                color: #000;
+            }
+            .bgimg {
+                background-image: url("https://www.itweb.co.za/static/modules/2022/11/221107.jpg");
+                min-height: 100%;
+                min-width: 100%;
+                background-size: cover;
+            }
+
+        </style>
+    </head>
+    <body class="bgimg">
+        <div class="content"><br>
+          <h1>Assignment-3</h1>
+          <h2> Watson Assistant chatBot</h2>
+          <h3>Customer needs,</h3>
+          <h3> For Restaurant query rectify</h3>
+        </div>
+
+        <script>
+            window.watsonAssistantChatOptions = {
+            integrationID: "8f1fee5a-eb57-46e9-9350-97fec79a2198", // The ID of this integration.
+            region: "eu-gb", // The region your integration is hosted in.
+            serviceInstanceID: "69f9a9a6-2f76-40b5-9ce8-393842b94534", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+            });
+         </script>
+    </body>
+</html>
