@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>SSF JOB RECOMMEND</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block head %}
+    <link rel="shortcut icon" type="x-icon" href="https://skill-set-finder-pictures.s3.jp-tok.cloud-object-storage.appdomain.cloud/icon.jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <style>
+      body,
+      h1 {
+        font-family: "Raleway", sans-serif;
+      }
+
+      body,
+      html {
+        height: 100%;
+      }
+
+      .bgimg {
+        background-image: url("https://wallpaperaccess.com/full/1691809.jpg");
+        min-height: 100%;
+        min-width: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+      .w3-display-middle{
+        align-items: center;
+      }
+    </style>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block body %}
+    <header class="p-3 text-bg-muted">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          </a>
+          <div class="row">
+            <div class="col-md-4 col-xs-6">
+              <a href="/"><img src="https://skill-set-finder-pictures.s3.jp-tok.cloud-object-storage.appdomain.cloud/logo.jpg" alt="Logo" class="img-responsive" width="100px" height="80px"/></a>
+            </div>
+          </div>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+            <li><a href="#" class="nav-link px-2 text-body">Home</a></li>
+            <li><a href="/about" class="nav-link px-2 text-body">About</a></li>
+          </ul>
+          <div class="text-end">
+            <button
+              type="button"
+              class="btn btn-outline-secondary me-2"
+              onclick="location.href='login'"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="location.href='/signup'"
+            >
+              Sign-up
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <div class="w3-display-middle">
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href=' https://www.amazon.jobs/'" width="400px" height="200px">           Amazon  Provide Jobs
+        </button>
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href='https://in.indeed.com'" width="400px" height="200px">           Indeed recommend Jobs
+        </button>
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href='https://www.shine.com'" width="400px" height="200px">           Shine recommend Jobs
+        </button>
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href='https://careers.zohocorp.com'" width="400px" height="200px">           Zoho  Provide Jobs
+        </button>
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href='https://www.naukri.com'" width="400px" height="200px">           Naukri  recommend Jobs
+        </button>
+        <button
+           class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" onclick="location.href='https://in.linkedin.com'" width="400px" height="200px">           Linkedin recommend Jobs
+        </button>
+        <hr class="w3-border-grey" style="margin: auto; width: 40%" />
+        <p class="w3-large w3-center">
+          <br><i>"Make a person as Employee"</i></p>
+      </div>
+    </div>
+    <script>
+      window.watsonAssistantChatOptions = {
+      integrationID: "a0aec1f7-c01e-44a7-9dac-4287deb3ca44", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "fed1cfa2-42a7-4a33-946d-4707aa1bdb45", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+      };
+      setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+      });
+   </script>
+
+    {% endblock %}
+  </body>
+</html>

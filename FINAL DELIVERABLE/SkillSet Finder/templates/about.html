@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ABOUT US</title>
+  <link rel="shortcut icon" type="x-icon" href="https://skill-set-finder-pictures.s3.jp-tok.cloud-object-storage.appdomain.cloud/icon.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1 {
+        font-family: "Raleway", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 6px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(34, 42, 56);
+  color: white;
+}
+
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #559;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  {% block body %}
+  <header class="p-3 text-bg-muted">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+             </svg>
+          </a>
+
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 text-body">Home</a></li>
+            <li><a href="about" class="nav-link px-2 text-body">About</a></li>
+          </ul>
+         <div class="text-end">
+            <button type="button" class="btn btn-outline-secondary me-2" onclick="location.href='login'">Login</button>
+            <button type="button" class="btn btn-success" onclick="location.href='signup'">Sign-up</button>
+         </div>
+      </div>
+    </div>
+ </header>
+
+ <div class="about-section">
+   <h1>About Us</h1>
+   <p>We have come up with a new innovation solution through which you can directly choose
+    your job related to your skills without needing help from someone.User can login into
+    application and search a job otherwise interact with chatbot via entering skills to the bot,
+    it suggest some job based on entered skills and also it update latest jobs everyday, lists
+    of jobs are uploaded into database and the chatbot also connected with database once
+    user enter skills into chatbot it will search related job in database then it display various
+    jobs related to skills.
+    </p>
+ </div>
+ <div class="partner-section">
+    <h2 style="text-align:center" >Our Partners</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>IBM</h2>
+            <p class="title">Technical partner</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>ICT Academy</h2>
+            <p class="title">Academic partner</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <div class="container">
+            <h2>Universities</h2>
+            <p class="title">Supporting partner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+ </div>
+ {% endblock %}
+</body>
+</html>
